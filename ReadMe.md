@@ -3,7 +3,6 @@
 　Qt5学習。QtでSQLite3を使う。QSqlTableModel.setFilter("Field = 値")に該当するレコードのみ更新、削除した。
 
 * `QSqlTableModel::setFilter("Field = 値")`にて対象レコードを絞り込める
-    * 前回のプロセスで保存したレコードが対象に含まれない……
 * `model.submitAll();`: insertRecord, setRecord, removeRecordの直後でsubmitAll()を実行しないと、その後の操作が反映されない
 
 ## 前回まで
@@ -98,10 +97,6 @@ while (query.next()) {
     qDebug() << query.value(0) << "|" << query.value(1) << "|" << query.value(2);
 }
 ```
-
-# 問題
-
-* 前回保存したレコードが対象に含まれない
 
 # 参考
 
